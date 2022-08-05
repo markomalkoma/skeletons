@@ -1,0 +1,58 @@
+FROM COMAND-LINE:
+
+1 Create project folder and enter it with: mkdir PoseNet && cd PoseNet (or some other project name)
+
+
+2 Create virtual environment in folder with: pip -m venv venv
+
+
+3 Activate virtual environment with: 
+
+linux(bash): 
+
+	source venv/scripts/activate
+
+or cmd (windows): 
+
+	.\venv\scripts\activate
+
+
+4 Copy files in folder:
+
+- requirements.txt
+- JSON_to_skeletons.py
+- video_to_JSON.p
+- manual.txt
+
+
+
+5 Install dependencies with: 
+
+	pip install -r requirements.txt
+
+
+
+6 Create json file from video with:
+
+	python video_to_JSON.py video_path
+	
+	ex: 
+	
+	python video_to_JSON.py src/video_1.mp4
+
+
+
+7 Create skeleton video with:
+	
+	python JSON_to_skeletons.py new_video_path
+
+	ex:
+
+	python JSON_to_skeletons.py dest/video_1.avi
+
+
+
+FROM TEXT EDITOR:
+
+8 Change colors and linewidths in JSON_to_skeletons.py
+	
